@@ -1,0 +1,651 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family:'poppins',sans-serif;
+}
+a:visited, a:active, a:focus {
+  text-decoration: none;
+}
+/*++++++++++Theme Colors+++++++++++*/
+:root{
+  --side-navigation-bg-color:#000;
+}
+/*++++++++++Theme Colors+++++++++++*/
+::-webkit-scrollbar-track{
+  border-radius: 0px;
+	background-color: transparent;
+}
+::-webkit-scrollbar{
+	width: 0px;
+	background-color: transparent;
+}
+::-webkit-scrollbar-thumb{
+	border-radius: 0px;
+  background-color: #fff;
+  position: absolute;
+}
+.no-padding{
+  padding:0 !important;
+}
+.sticky-side-nav{
+  position:sticky !important;
+  top:0;
+}
+.App .side-navigation {
+  text-align: center;
+  background: var(--side-navigation-bg-color);
+  padding: 50px 15px;
+  height: 100vh;
+}
+.App .side-navigation .header h1{
+  color:#fff;
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: 1px;
+  position: relative;
+}
+.App .side-navigation .header h1:after {
+  content: 'FRONTEND DEVELOPER';
+  position: absolute;
+  font-size: 10px;
+  width: 100%;
+  left: -36px;
+  bottom: -15px;
+  color: #2196F3;
+}
+.App .side-navigation .header .social-links {
+  margin-top: 50px;
+}
+.App .side-navigation .header .social-links .social-profile {
+  color: #fff;
+  margin: 0px 15px;
+  font-size: 30px;
+}
+.App .side-navigation .header .menu-wrapper {
+  margin-top: 30px;
+}
+.App .side-navigation .header .menu-wrapper ul{
+  margin:0;
+}
+.App .side-navigation .header .menu-wrapper ul li {
+  list-style-type: none;
+}
+.App .side-navigation .header .menu-wrapper ul li a{
+  color: #bbb;
+  padding: 6px 0px;
+  display: block;
+  font-size: 16px;
+  transition:0.2s all linear;
+  text-decoration: none;
+} 
+.App .side-navigation .header .menu-wrapper ul li a:hover{
+  color:#fff;
+  text-decoration: none;
+}
+.App .side-navigation .header .profile-picture{
+  width:200px;
+  height:200px;
+  margin: 0 auto 5px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.App .side-navigation .header .profile-picture img{
+  width:100%;
+  height:100%;
+  border-radius: 50%;
+  transform: scale(1.5);
+  position: relative;
+  top: 15px;
+}
+.hero-banner {
+  background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(/assets/images/hero-banner.jpg);
+  background-size: cover;
+  background-position:center;
+  padding: 125px 0px;
+  text-align: center;
+  background-color:#999;
+}
+.hero-banner p, .hero-banner h2, .hero-banner q{
+  color:#fff;
+}
+.hero-banner h2{
+  margin: 5px 0px 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 35px;
+}
+.hero-banner .writer{
+  margin-top: 10px;
+  font-size: 16px;
+}
+.about-wrapper{
+  padding: 50px 50px 30px;
+  background-color: #efefef75;
+}
+.about-wrapper .about-main-wrapper {
+  text-align: center;
+}
+.about-wrapper .about-main-wrapper p{
+  font-size: 15px;
+  color: #888;
+}
+.about-wrapper .about-main-wrapper h3{
+  margin-top: 0;
+  color:#000;
+}
+.about-wrapper .about-content{
+  margin-top: 35px;
+}
+.about-wrapper .about-content p{
+  font-size: 16px;
+  color: #666;
+  line-height: 25px;
+}
+.about-wrapper .about-content .improvement {
+  margin-top: 45px;
+}
+.about-wrapper .about-content .improvement h3{
+  margin-bottom: 30px;
+  font-size: 20px;
+  color: #000;
+  text-align: center;
+}
+.expertise {
+  padding: 70px 0px 20px;
+}
+.expertise .web-dev {
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 20px 10px 10px;
+  border-radius: 10px;
+  min-height: 265px;
+  background-color: #fff;
+}
+.expertise .web-dev p:nth-child(2) {
+  color: #000;
+  margin: 20px 0; 
+  letter-spacing: 1px;
+}
+.expertise .web-dev img {
+  height: 52px;
+}
+.expertise .web-dev p:nth-child(3) {
+  font-size: 13px;
+  line-height: 20px;
+  margin: 0;
+}
+.project-wrapper {
+  padding: 50px;
+  background-color: #efefef;
+}
+.data-wrapper {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.48),rgb(255, 255, 255)),url(/assets/images/projects-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 125px 65px;
+  text-align: center;
+  background-color: #999;
+  border-bottom: 1px solid #eee;
+}
+.data-wrapper>h2, .data-wrapper h2 + p {
+  text-align: center;
+}
+.data-wrapper>h2 {
+  margin: 0px 0px 30px;
+  color: #000;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.project-wrapper>h2 {
+  color: #000;
+  margin-bottom: 30px;
+}
+.project-info {
+  padding: 0px;
+  text-align: left;
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 0px;
+  cursor: pointer;
+  position: relative;
+  transition: 0.3s all linear;
+  top: 0;
+  margin-bottom: 30px;
+}
+.project-info:hover {
+  top:-10px;
+}
+.project-info .project-tooltip button {
+  width: 100%;
+  background: #2196f3e0;
+  color: #fff;
+  font-size: 12px;
+  letter-spacing: 1px;
+  border: none;
+  margin: 0;
+  padding: 15px;
+}
+.project-info .project-content {
+  padding: 10px;
+}
+.project-info .project-content p {
+  font-size: 13px;
+  margin: 0px 0px 0px;
+  font-weight: bold;
+}
+.project-info .project-content input {
+  color: #2196F3;
+  font-size: 12px;
+  border: none;
+  outline: none;
+  width: 100%;
+  cursor: pointer;
+}
+.project-info .project-content .tags {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.project-info .project-content .tags span {
+  background-color: #999;
+  border-radius: 3px;
+  margin-right: 5px;
+  color: #fff;
+  font-size: 11px;
+  padding: 3px 8px;
+} 
+.project-info a {
+  color: #ffffff;
+  background-color: #2196F3;
+  padding: 15px 15px;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 10px;
+  width: 100%;
+  text-align: center;
+  letter-spacing: 2px;
+}
+.project-info a:hover, .project-info a:focus {
+  text-decoration: none;
+  color: #fff;
+}
+.project-wrapper .project-info img{
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+}
+.project-wrapper .row {
+  margin-bottom: 30px;
+}
+.project-wrapper .many-more {
+  color: #000;
+  font-weight: bold;
+  font-size: 18px;
+}
+.data-wrapper-technology {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.48),rgb(255, 255, 255)),url(/assets/images/technology-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 125px 65px;
+  text-align: center;
+  background-color: #999;
+  border-bottom: 1px solid #eee;
+}
+.data-wrapper-technology>h2, .data-wrapper-technology h2 + p {
+  text-align: center;
+}
+.data-wrapper-technology>h2 {
+  margin: 0px 0px 30px;
+  color: #000;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+/*++++++++++++CSS FOR TECHNOLOGY PAGE STARTS HERE +++++++++++++++++*/
+.project-data-wrapper .technology-wrapper {
+  padding: 50px 50px 50px;
+}
+.project-data-wrapper .technology-wrapper .tech-info {
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  height: 232px;
+  padding: 20px;
+}
+.tech-info.center {
+  width: 289px;
+  margin: auto;
+}
+.project-data-wrapper .technology-wrapper .tech-info img {
+  margin-bottom: 30px;
+  max-height: 130px;
+  width: auto;
+  object-fit: cover;
+}
+.project-data-wrapper .technology-wrapper .tech-info p {
+  color:#000;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.project-data-wrapper .technology-wrapper .tech-info p span {
+  background-color: #fff;
+  padding: 2px 6px;
+  box-shadow: 2px 2px 4px #000;
+  border-radius: 3px;
+  font-size: 12px;
+  margin-left: 5px;
+}
+.certificates {
+  background: #d7ddff;
+  padding: 70px 50px 20px;
+}
+.certificates h2 {
+  margin: 0px 0px 30px;
+  color: #000;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-align: center
+}
+.certificates .tech-info {
+  text-align: center;
+  border: 1px solid #fff;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  padding: 20px;
+}
+.certificates .tech-info.center {
+  width: 289px;
+  margin: auto;
+}
+.certificates .tech-info img {
+  margin-bottom: 30px;
+  max-height: 130px;
+  height: 100px;
+}
+.certificates .tech-info.center {
+  background-color: #fff;
+}
+.certificates .tech-info p {
+  color:#000;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.certificates .tech-info p span {
+  background-color: #fff;
+  padding: 2px 6px;
+  box-shadow: 2px 2px 4px #000;
+  border-radius: 3px;
+  font-size: 12px;
+  margin-left: 5px;
+}
+/*+++++++++++++++++++CSS FOR CONTACT PAGE STARTS HERE +++++++++++++++++*/
+.data-wrapper-contact {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.48),rgb(255, 255, 255)),url(/assets/images/contact-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 125px 65px;
+  text-align: center;
+  background-color: #999;
+  border-bottom: 1px solid #eee;
+}
+.data-wrapper-contact>h2 {
+  margin: 0px 0px 30px;
+  color: #000;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.project-wrapper.contact-wrapper>p:first-child {
+  font-size: 25px;
+  color: #2196F3;
+}
+.project-wrapper.contact-wrapper>p:nth-child(2) {
+  color: #999;
+  margin-bottom: 30px;
+  max-width: 600px;
+}
+.project-wrapper.contact-wrapper form {
+  border:1px solid #fff;
+  padding:20px;
+  border-radius: 8px;
+  margin-bottom: 50px;
+}
+.project-wrapper.contact-wrapper .row {
+  margin-bottom: 0px;
+}
+.project-wrapper.contact-wrapper form label {
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 11px;
+  color: #000;
+}
+.project-wrapper.contact-wrapper form .form-control {
+  display: block;
+  width: 100%;
+  height: 50px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #000;
+  background-color: #fff;
+  background-image: none;
+  border: none;
+  border-radius: 5px;
+  position: relative;
+}
+.project-wrapper.contact-wrapper form .form-control#message {
+  height: auto;
+}
+.project-wrapper.contact-wrapper form .form-control::placeholder {
+  font-size: 11px;
+}
+.project-wrapper.contact-wrapper form button {
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 10px  15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+}
+.project-wrapper.contact-wrapper .contact-page {
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+.project-wrapper.contact-wrapper .contact-page .fa {
+  background-color: #2196f3d1;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-right: 15px;
+  font-size: 25px;
+  color: #fff;
+}
+.project-wrapper.contact-wrapper .contact-page span {
+  color: #000;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+/*+++++++CSS FOR TOOLTIP ++++++++++++++*/
+.project-tooltip {
+  position: relative;
+  display: block;
+}
+.project-tooltip .tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: #333;
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: -65%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.project-tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent;
+  transform: rotate(180deg);
+}
+.project-tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+.hamburger {
+  position: fixed;
+  right: 15px;
+  top: 15px;
+  display: none;
+}
+.hamburger button {
+  background: #000;
+  border: none;
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px #000;
+  letter-spacing: 1px;
+  outline: none;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #000000ab;
+  display: none;
+}
+.App {
+  max-width: 1370px;
+  margin: 0 auto;
+  box-shadow: 0px 0px 5px #000;
+}
+/*+++++++++++++++Mobile CSS starts here +++++++++++++++++*/
+@media screen and (max-height: 700px) {
+  .App .side-navigation {
+    overflow: auto;
+  }
+}
+@media screen and (max-width: 1355px) {
+  .expertise .web-dev {
+    max-height: 265px;
+    overflow: auto;
+    margin-bottom: 15px;
+  }
+  .project-info .project-content p {
+    height: 40px;
+  }
+  .project-info .project-content .tags span {
+    font-size: 10px;
+    padding: 3px 6px;
+  }
+  .certificates .tech-info.center {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto 30px;
+  }
+  .certificates .tech-info img {
+    width: 100%;
+    object-fit: contain;
+  }
+  .project-wrapper.contact-wrapper .contact-page {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    display: block;
+    text-align: center;
+  }
+  .project-wrapper.contact-wrapper .contact-page .fa {
+    margin: auto;
+    border-radius: 50%;
+    margin-right: auto;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .about-wrapper, .project-wrapper, .certificates, .project-data-wrapper .technology-wrapper {
+    padding: 15px;
+  }
+  .expertise {
+    padding: 40px 0px 0px;
+  }
+  .expertise .web-dev:nth-child(3), .expertise .web-dev:nth-child(4) {
+    margin-bottom: 0px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .App .side-navigation {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    bottom: 0;
+    left: -80%;
+    box-shadow: 0px 0px 4px #000;
+    transition: 0.3s all linear;
+  }
+  .hamburger {
+    display: block;
+  }
+  .expertise .web-dev {
+    margin-bottom: 30px;
+  }
+  .no-margin {
+    margin-bottom: 0px !important;
+  }
+  .col-lg-3.col-md-3.col-sm-12.col-xs-12.no-padding.sticky-side-nav {
+    z-index: 999;
+  }
+  .App .side-navigation .header .profile-picture {
+    width: 150px;
+    height: 150px;
+  }
+  .project-wrapper.contact-wrapper .contact-page {
+    margin-bottom: 15px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .project-info .project-content p {
+    height: unset;
+  }
+  .project-wrapper .row {
+    margin-bottom: unset;
+  }
+  .data-wrapper h2 + p, .data-wrapper-technology h2 + p, .data-wrapper-contact h2 + p {
+    border:1px solid #c3c3c3;
+    border-radius: 5px;
+    padding: 5px;
+  }
+  .hero-banner q {
+    font-size: 11px;
+  }
+  .data-wrapper, .data-wrapper-technology, .data-wrapper-contact {
+    padding: 60px 30px;
+  }
+  .data-wrapper>h2, .data-wrapper-technology>h2, .data-wrapper-contact>h2 {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .hero-banner h2 {
+    font-size: 20px;
+  }
+}
