@@ -408,6 +408,7 @@ a:visited, a:active, a:focus {
   padding:20px;
   border-radius: 8px;
   margin-bottom: 50px;
+  display: none; /* Form Needs to fix, This property is temperory */
 }
 .project-wrapper.contact-wrapper .row {
   margin-bottom: 0px;
